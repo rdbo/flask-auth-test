@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Python Flask Test - Index{% endblock %}
+{% block content %}
+<h1>
+    Welcome, {{ user.username }} <br/>
+    Token: {{token}}
+</h1>
+<form method="POST" action="/logout">
+    <input type="hidden" name="token" value="{{token}}">
+    <input type="submit" value="Logout">
+</form>
+{% endblock %}

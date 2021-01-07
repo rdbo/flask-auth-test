@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Python Flask Test - Login{% endblock %}
+{% block content %}
+<form method="POST" action="/login">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Login">
+    <a href="/new">Create Account</a>
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Python Flask Test - Index{% endblock %}
+{% block content %}
+<h1>
+{% if err == "duplicated_username" %}
+Username already exists. Try something different.
+{% elif err == "invalid_form" %}
+Invalid form values. Try again.
+{% elif err == "invalid_login" %}
+Invalid username or password. Try again.
+{% elif err == "invalid_token" %}
+Invalid authentication token.
+{% else %}
+Unknown error.
+{% endif %}
+</h1>
+{% endblock %}

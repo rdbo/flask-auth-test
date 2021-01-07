@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <title>{% block title %}Python Flask Test{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block body %}
+        <div class="navbar">
+            {% block navbar %}
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+            <a href="/users">Users</a>
+            <a href="/sessions">Sessions</a>
+            {% endblock %}
+        </div>
+
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        {% endblock %}
+    </body>
+</html>

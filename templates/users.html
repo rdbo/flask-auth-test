@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Python Flask Test - Index{% endblock %}
+{% block content %}
+{% for u in user_list %}
+<div class="data-block">
+    <p>User: {{ u.username }}</p>
+    <p>Password: {{ u.password }}</p>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Python Flask Test - Index{% endblock %}
+{% block content %}
+{% for s in session_list %}
+<div class="data-block">
+    <p>User: {{ session_list[s] }}</p>
+    <p>Token: {{ s }}</p>
+</div>
+{% endfor %}
+{% endblock %}
